@@ -1,0 +1,54 @@
+.main .breadcrumb {
+  background-color: #000;
+  border-radius: 0%;
+}
+
+#adverse_box {
+  padding: 0 1rem;
+  margin-bottom: 5vh;
+}
+
+
+#adverse_form .row {
+  display: flex;
+}
+
+#adverse_box {
+  padding: 0 1rem;
+}
+
+#adverse_box .panel,
+#info_group li {
+  margin: 0.5rem !important;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+#res_info.loading::after {
+  content: 'loading.. wait a minute..';
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+#inputkit {
+  display: flex;
+
+  margin: 0.5rem;
+}
+
+#adverse_box .panel-body {
+  display: flex;
+  justify-content: start;
+}
+
+#res_info.notfound::after {
+  content: 'NOT FOUND KEYWORD';
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  bottom: auto;
+}
+

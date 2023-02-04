@@ -1,0 +1,72 @@
+.main .breadcrumb {
+  background-color: #000;
+  border-radius: 0%;
+}
+
+#res_info {
+  padding: 0.5rem 1rem;
+  padding-bottom: 25vh;
+}
+
+#sortbox {
+  padding: 0 1rem;
+}
+
+#sortbox > .panel,
+#info_group li {
+  margin: 0.5rem !important;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+#res_info.loading::after {
+  content: 'loading.. wait a minute..';
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+#inputkit {
+  display: flex;
+
+  margin: 0.5rem;
+}
+
+#sortbox .panel-body {
+  display: flex;
+  justify-content: start;
+}
+
+#res_info.notfound::after {
+  content: 'NOT FOUND KEYWORD';
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  #sortbox {
+    padding: 0 1rem;
+  }
+
+  #sortbox > .panel,
+  #info_group li {
+    margin: 0.5rem !important;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  #inputkit {
+    margin: 0.5rem;
+  }
+
+  #sortbox .panel-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #res_info.notfound::after {
+    content: 'NOT FOUND KEYWORD';
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,153 @@
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VaccineAbout</title>
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <meta name="description" content="VaccineAbout,关于疫苗信息查询及不良反应状况反馈收集的平台,开发团队来自CQUPT" />
+    <meta name="renderer" content="webkit" />
+    <meta name="keywords" content="VaccineAbout,疫苗,Vaccine,不良反应," />
+    <link rel="stylesheet" href="./css/normalize.css">
+    <script src="./lib/jquery-3.6.3.min.js"></script>
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <script src="./lib/bootstrap.js"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="./index.html">Vaccine About</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="./result.html">SORT</a></li>
+                        <li><a href="./adverse.html" target="_blank">不良反应</a></li>
+
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Link</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <form class="navbar-form navbar-right">
+                        <div class="form-group">
+                            <input id="sub_search_ipt" type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button id="sub_search_btn" type="submit"
+                            class="btn btn-default glyphicon glyphicon-search"></button>
+                    </form>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+
+        </nav>
+
+    </header>
+
+    <div class="main">
+        <div class="searchbox">
+            <div class="searchblock">
+            </div>
+            <div class="searchkit">
+                <div class="searchtab">
+                    <ul class="nav nav-tabs">
+                        <li role="presentation" class="d-active" data-way="ALL"><a href="#">ALL</a></li>
+                        <li role="presentation" data-way="CFDA"><a href="#">CFDA</a></li>
+                        <li role="presentation" data-way="FDACN"><a href="#">FDACN</a></li>
+                    </ul>
+                    <input type="search" name="" class="form-control" id="search_input" value="" required="required"
+                        title="" style="border-top-left-radius:0; border:none">
+                </div>
+
+
+                <button type=" button" id="search_btn" class="btn btn-primary"><span
+                        class="glyphicon glyphicon-search"></span></button>
+            </div>
+        </div>
+
+        <!-- <div class="newinfobox container-fluid">
+
+
+        </div> -->
+
+
+
+        <footer class="container">
+            <div class="row">
+                <div class="product col-xs-12 col-sm-4">
+                    <h3>VACCINE ABOUT</h3>
+                    <p>testtesttest</p>
+                    <p>testtesttest</p>
+                    <a href="#">check<span class="glyphicon glyphicon-menu-right"></span></a>
+                </div>
+                <div class="contact col-xs-12 col-sm-4">
+                    <h3>CONTACT</h3>
+                    <a href="#"><span class="icon-mail" style="margin-right: 0.5rem;"></span>check<span
+                            class="glyphicon glyphicon-menu-right"></span></a>
+                </div>
+                <div class="social col-xs-12 col-sm-4">
+                    <h3>SOCIAL</h3>
+                    <div class="iconbox">
+                        <a href="#"><span class="icon-github"></span></a>
+                        <a href="#"><span class="icon-sina-weibo"></span></a>
+                        <a href="#"><span class="icon-twitter"></span></a>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <div class="row">
+                <div class="root container-fluid">
+                    <small class="copyright col-xs-5 col-sm-5">© The VaccineAbout All Rights Reserved 2023</small>
+                    <ul class="linkgroup container list-inline col-sm-7">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">|</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">|</a></li>
+                        <li><a href="#">Home</a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </footer>
+</body>
+
+<script src="./js/index.js"></script>
+<script src="./js/common.js"></script>
+
+
+
+</html>

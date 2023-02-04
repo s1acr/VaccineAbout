@@ -1,0 +1,327 @@
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adverse</title>
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <meta name="description" content="VaccineAbout,关于疫苗信息查询及不良反应状况反馈收集的平台,开发团队来自CQUPT" />
+    <meta name="renderer" content="webkit" />
+    <meta name="keywords" content="VaccineAbout,疫苗,Vaccine,不良反应," />
+    <link rel="stylesheet" href="./css/normalize.css">
+    <script src="./lib/jquery-3.6.3.min.js"></script>
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <script src="./lib/bootstrap.js"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/adverse.css">
+</head>
+
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="./index.html">Vaccine About</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="./result.html">SORT</a></li>
+                        <li><a href="./adverse.html">不良反应</a></li>
+
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Link</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <form class="navbar-form navbar-right">
+                        <div class="form-group">
+                            <input id="sub_search_ipt" type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button id="sub_search_btn" type="submit"
+                            class="btn btn-default glyphicon glyphicon-search"></button>
+                    </form>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+
+        </nav>
+
+    </header>
+
+
+    <div class="main">
+        <ol class="breadcrumb">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./adverse.html" class="active">Adverse</a></li>
+        </ol>
+        <div id="adverse_box">
+            <div class="container" style="padding:0">
+                <div class="ad_list col-xs-12 col-lg-7 col-md-6">
+                    <div class="panel panel-default">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">RECENT UPDATE</div>
+                        <div class="panel-body">
+                            <div class="searchkit">
+                                <div class="form-group form-inline container">
+
+                                    <div class="row">
+                                        <input type="search" name="" id="ru_search_ipt" class="form-control">
+
+                                        <button type="button" id="ru_search_btn" class="btn btn-default">Search</button>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div id="res_info"></div>
+                </div>
+                <div class="asidefrom col-xs-12 col-lg-5 col-md-6">
+                    <div class="panel panel-default">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">ADR不良反应上报</div>
+                        <div class="panel-body">
+                            <form id="adverse_form">
+
+                                <div class="row">
+                                    <div class="form-group col-sm-3 col-xs-12">
+                                        <label for="sex">sex</label>
+                                        <select name="sex" class="form-control" id="sex">
+                                            <option></option>
+                                            <option>男</option>
+                                            <option>女</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-sm-4 col-xs-12">
+                                        <label for="birth">birth</label>
+                                        <input name="birth" id="birth" type="date" class="form-control"
+                                            placeholder="birth">
+                                    </div>
+                                    <div class="form-group col-sm-4 col-xs-12">
+                                        <label for="drugName">drugName</label>
+                                        <input name="drugName" id="drugName" type="text" class="form-control"
+                                            placeholder="drugName">
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group">
+                                    <label for="drugDeliveryRoute">drugDeliveryRoute</label>
+                                    <input name="drugDeliveryRoute" id="drugDeliveryRoute" type="text" class="
+                                                                        form-control" id="drugDeliveryRoute"
+                                        placeholder="drugDeliveryRoute">
+                                </div>
+
+
+
+                                <div class="form-group">
+                                    <label for="symptom">symptom</label>
+                                    <input name="symptom" type="text" class="form-control" id="symptom"
+                                        placeholder="symptom">
+                                </div>
+                                <div class="form-group">
+                                    <label for="reason">reason</label>
+                                    <input name="reason" type="text" class="form-control" id="reason"
+                                        placeholder="reason">
+                                </div>
+                                <div class="form-group">
+                                    <label for="occurrence">occurrence</label>
+                                    <input name="occurrence" type="text" class="form-control" id="occurrence"
+                                        placeholder="occurrence">
+                                </div>
+                                <div class="form-group">
+                                    <label for="previousSymptom">previousSymptom</label>
+                                    <textarea name="previousSymptom" style="resize: none;" class="form-control"
+                                        id="previousSymptom" rows="3"></textarea>
+                                </div>
+                                <button id="ad_submit" type="submit" class="btn btn-default">提交</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+    <footer class="container">
+        <div class="row">
+            <div class="product col-xs-12 col-sm-4">
+                <h3>VACCINE ABOUT</h3>
+                <p>testtesttest</p>
+                <p>testtesttest</p>
+                <a href="#">check<span class="glyphicon glyphicon-menu-right"></span></a>
+            </div>
+            <div class="contact col-xs-12 col-sm-4">
+                <h3>CONTACT</h3>
+                <a href="#"><span class="icon-mail" style="margin-right: 0.5rem;"></span>check<span
+                        class="glyphicon glyphicon-menu-right"></span></a>
+            </div>
+            <div class="social col-xs-12 col-sm-4">
+                <h3>SOCIAL</h3>
+                <div class="iconbox">
+                    <a href="#"><span class="icon-github"></span></a>
+                    <a href="#"><span class="icon-sina-weibo"></span></a>
+                    <a href="#"><span class="icon-twitter"></span></a>
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="root container-fluid">
+                <small class="copyright col-xs-5 col-sm-5">© The VaccineAbout All Rights Reserved 2023</small>
+                <ul class="linkgroup container list-inline col-sm-7">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">|</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">|</a></li>
+                    <li><a href="#">Home</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+<script type="text/html" id="tpl-res">
+
+    <!-- List group -->
+<ul class="list-group" id="info_group">
+    {{each $data[0]}}
+    <li class="list-group-item">
+        {{each $data[0][$index]}}
+        <p>{{$index}}: {{@ $value}}</p>
+        {{/each}}
+    </li>
+    {{/each}}
+    {{if !$data[2]}}
+    <div id="numbar" style="margin: 0 auto; text-align: center; display: flex; justify-content: center;">
+        <nav aria-label="Page navigation">
+            <ul id="pagination" class="pagination">
+                <li>
+                    <a href="javascript:;" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="active"><a href="javascript:;">{{$data[1]}}</a></li>
+                <li><a href="javascript:;">{{$data[1]+1}}</a></li>
+                <li><a href="javascript:;">{{$data[1]+2}}</a></li>
+                <li><a href="javascript:;">{{$data[1]+3}}</a></li>
+                <li><a href="javascript:;">{{$data[1]+4}}</a></li>
+
+                <li>
+                    <a href="javascript:;" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                <li style=" padding: 0 !important; ">
+                    <a href="javascript:;" aria-label="Previous" style="padding:0; ">
+                        <input id="numgo"
+                            style="width: 35px; height: 32px; border:0; outline: 0; padding: 4px; text-align: center;"
+                            type="text">
+                    </a>
+                </li>
+
+                <li id="gobtn">
+                    <a href="javascript:;" aria-label="Next">
+                        GO
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    {{else}}
+    <div id="numbar" style="margin: 0 auto; text-align: center; display: flex; justify-content: center;">
+        <nav aria-label="Page navigation">
+            <ul id="pagination" class="pagination">
+                <li>
+                    <a href="javascript:;" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li><a href="javascript:;">{{$data[1]}}</a></li>
+                <li><a href="javascript:;">{{$data[1]+1}}</a></li>
+                <li class="active"><a href="javascript:;">{{$data[1]+2}}</a></li>
+                <li><a href="javascript:;">{{$data[1]+3}}</a></li>
+                <li><a href="javascript:;">{{$data[1]+4}}</a></li>
+                <li>
+                    <a href="javascript:;" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                <li style=" padding: 0 !important; ">
+                    <a href="javascript:;" aria-label="Previous" style="padding:0; ">
+                        <input id="numgo"
+                            style="width: 35px; height: 32px; border:0; outline: 0; padding: 4px; text-align: center;"
+                            type="text">
+                    </a>
+                </li>
+
+                <li id="gobtn">
+                    <a href="javascript:;" aria-label="Next">
+                        GO
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    {{/if}}
+</ul>
+
+</script>
+
+<!-- 定义模板 -->
+<script src="./lib/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/adverse.js"></script>
+
+
+</html>
