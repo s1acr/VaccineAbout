@@ -87,7 +87,6 @@ $(function () {
 
   $('#ru_search_ipt').on('focus', () => {
     $('#ru_search_ipt').on('keyup', (e) => {
-      console.log($(this))
       if (e.keyCode === 13) {
         $('#ru_search_btn').click()
       }
