@@ -43,7 +43,7 @@
   justify-content: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1170px) {
   #sortbox {
     padding: 0 1rem;
   }
