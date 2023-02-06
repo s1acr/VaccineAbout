@@ -81,11 +81,13 @@ $(function () {
   $('#ru_search_btn').on('click', () => {
     let text = $('#ru_search_ipt').val().trim()
     if (text === '') return alert('未输入关键字')
+    $('#ru_search_ipt').val('')
     sortByKw(text, resArr)
   })
 
   $('#ru_search_ipt').on('focus', () => {
-    $(this).on('keyup', (e) => {
+    $('#ru_search_ipt').on('keyup', (e) => {
+      console.log($(this))
       if (e.keyCode === 13) {
         $('#ru_search_btn').click()
       }
